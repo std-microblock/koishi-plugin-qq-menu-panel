@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="guide.css">
+<style>.page { height: 1040px; overflow: hidden; }</style>
+</head>
+<body>
+<div class="page">
+  <div class="head">
+    <div>
+      <h1>按钮打不开？群主也能在机器人设置里手动开启</h1>
+      <div class="sub">效果和授权页一样，每个群只需设置一次</div>
+    </div>
+    <div class="note">界面为示意，不同版本略有差异 · 仅群主可修改</div>
+  </div>
+
+  <div class="cols">
+    <!-- 第一步：群成员列表找到机器人 -->
+    <div class="card">
+      <div class="card-head"><div class="num">1</div><div>群主打开<em>群聊成员</em>列表，<br>在「机器人」分组找到<em>{{BOT_NAME}}</em></div></div>
+      <div class="stage">
+        <div class="phone">
+          <div class="sb"><span>09:41</span><span class="r">▂▄▆ 5G ▮▮▮</span></div>
+          <div class="nav"><span class="back">‹</span><span class="title">群聊成员<small>(128)</small></span><span class="menu">⋯</span></div>
+          <div class="search">🔍 搜索</div>
+          <div class="sec">群主、管理员 (3)</div>
+          <div class="item"><div class="av a3">主</div><div class="n"><span class="badge owner">群主</span>群主</div></div>
+          <div class="item"><div class="av a2">管</div><div class="n"><span class="badge admin">管理员</span>阿管</div></div>
+          <div class="item"><div class="av a4">理</div><div class="n"><span class="badge admin">管理员</span>小理</div></div>
+          <div class="sec">机器人 (1)</div>
+          <div class="item hl" style="margin: 0 6px;"><div class="av bot">{{BOT_AVATAR}}</div><div class="n">{{BOT_NAME}} <span class="badge bot">机器人</span></div><span class="chev">›</span></div>
+          <div class="sec">成员 (124)</div>
+          <div class="item"><div class="av a1">群</div><div class="n">群友小明</div></div>
+          <div class="item"><div class="av a4">红</div><div class="n">小红</div></div>
+          <div class="item"><div class="av a2">蓝</div><div class="n">小蓝</div></div>
+          <div class="item"><div class="av a3">绿</div><div class="n">小绿</div></div>
+          <div class="tip" style="right: 16px; top: 462px;">群主点进去</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第二步：机器人资料页齿轮 -->
+    <div class="card">
+      <div class="card-head"><div class="num">2</div><div>进入机器人资料页，<br>点<em>右上角齿轮</em>打开设置</div></div>
+      <div class="stage">
+        <div class="phone white">
+          <div class="sb" style="background:#ffd49a"><span>09:41</span><span class="r">▂▄▆ 5G ▮▮▮</span></div>
+          <div class="cover"><span class="back">‹</span><div class="gear hl">⚙</div></div>
+          <div class="profile">
+            <div class="top"><div class="av bot">{{BOT_AVATAR}}</div><div><div class="nm">{{BOT_NAME}} <span class="badge bot">机器人</span></div><div class="qq">QQ：{{BOT_UIN}}</div></div></div>
+            <div class="intro">群聊机器人：提供指令菜单与消息处理，发送 help 查看全部指令。</div>
+          </div>
+          <div class="box" style="border:1px solid #f0f1f2">
+            <div class="row"><div class="t">💬 对话指令</div><span class="chev">›</span></div>
+            <div class="row"><div class="t">🔲 快捷服务</div><span class="chev">›</span></div>
+          </div>
+          <div class="pin" style="right: 62px; top: 42px;">1</div>
+          <div class="tip" style="right: 64px; top: 90px;">群主点这里</div>
+          <div class="bottom-btns"><div class="o">添加到群聊</div><div class="p">发消息</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第三步：设置 -->
+    <div class="card">
+      <div class="card-head"><div class="num">3</div><div>消息范围选<em>「获取群内全部消息」</em>，并打开<em>主动在群聊内发言</em></div></div>
+      <div class="stage">
+        <div class="phone">
+          <div class="sb"><span>09:41</span><span class="r">▂▄▆ 5G ▮▮▮</span></div>
+          <div class="nav"><span class="back">‹</span><span class="title">设置</span><span class="menu"></span></div>
+          <div class="box" style="overflow:visible">
+            <div class="row hl"><div class="t">机器人可获取的群聊消息范围<div class="s" style="color:#1677ff">获取群内全部消息</div></div><span class="chev">›</span></div>
+          </div>
+          <div class="box" style="overflow:visible">
+            <div class="row hl"><div class="t">机器人主动在群聊内发言<div class="s">机器人可主动发消息，如定时任务推送等</div></div><div class="switch on"></div></div>
+          </div>
+          <div class="box"><div class="row"><div class="t">查看机器人添加者</div><span class="v">群主</span><span class="chev">›</span></div></div>
+          <div class="box"><div class="row"><div class="t">机器人权限设置</div><span class="chev">›</span></div></div>
+          <div class="box"><div class="row"><div class="t">加入黑名单<div class="s">你可在QQ设置-隐私-黑名单中管理</div></div><div class="switch"></div></div></div>
+          <div class="box"><div class="danger">移出本群</div></div>
+          <div class="pin" style="right: 0; top: 80px;">1</div>
+          <div class="pin" style="right: 0; top: 164px;">2</div>
+          <div class="tip" style="left: 24px; top: 572px;">① 点进去选「获取群内全部消息」</div>
+          <div class="tip" style="left: 24px; top: 614px;">② 打开「主动在群聊内发言」开关</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

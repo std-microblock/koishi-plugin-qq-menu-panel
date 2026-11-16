@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="guide.css">
+<style>.page { height: 1040px; overflow: hidden; }</style>
+</head>
+<body>
+<div class="page">
+  <div class="head">
+    <div>
+      <h1>群主授权机器人接收全部消息与主动发言</h1>
+      <div class="sub">在群里 <b>@{{BOT_NAME}}</b> 发送 <span class="cmd">/授权全消息 群号</span>，机器人回复按钮后，由<b>群主</b>按下面三步完成</div>
+    </div>
+    <div class="note">界面为示意，不同版本略有差异 · 需手机 QQ 9.2.90 及以上</div>
+  </div>
+
+  <div class="cols">
+    <!-- 第一步：发送指令 -->
+    <div class="card">
+      <div class="card-head"><div class="num">1</div><div>在群里 <em>@{{BOT_NAME}}</em> 发送<br><em>/授权全消息 群号</em>，任何人都可以发</div></div>
+      <div class="stage">
+        <div class="phone">
+          <div class="sb"><span>09:41</span><span class="r">▂▄▆ 5G ▮▮▮</span></div>
+          <div class="nav"><span class="back">‹</span><span class="title">示例群<small>(128)</small></span><span class="menu">≡</span></div>
+          <div class="chat">
+            <div class="msg"><div class="av a1">群</div><div><div class="name">群友小明</div><div class="bubble">机器人现在只能 @ 才回复吗？</div></div></div>
+            <div class="msg"><div class="av a2">管</div><div><div class="name"><span class="badge admin">管理员</span>阿管</div><div class="bubble">让群主授权一下就能接收全部消息了</div></div></div>
+            <div class="msg"><div class="av a3">主</div><div><div class="name"><span class="badge owner">群主</span>群主</div><div class="bubble">好，我来弄</div></div></div>
+          </div>
+          <div class="tip" style="left: 60px; bottom: 90px;">先 @{{BOT_NAME}}，再填本群群号发送</div>
+          <div class="inputbar">
+            <div class="field hl"><span style="color:#1677ff">@{{BOT_NAME}}</span>&nbsp;/授权全消息 123456789<span class="caret"></span></div>
+            <div class="send">发送</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第二步：群主点按钮 -->
+    <div class="card">
+      <div class="card-head"><div class="num">2</div><div>机器人回复后，<em>群主</em>点击<br>「群主点此授权」按钮</div></div>
+      <div class="stage">
+        <div class="phone">
+          <div class="sb"><span>09:41</span><span class="r">▂▄▆ 5G ▮▮▮</span></div>
+          <div class="nav"><span class="back">‹</span><span class="title">示例群<small>(128)</small></span><span class="menu">≡</span></div>
+          <div class="chat">
+            <div class="msg me"><div class="av a3">主</div><div><div class="name"><span class="badge owner">群主</span>群主</div><div class="bubble">@{{BOT_NAME}} /授权全消息 123456789</div></div></div>
+            <div class="msg"><div class="av bot">{{BOT_AVATAR}}</div><div>
+              <div class="name">{{BOT_NAME}} <span class="badge bot">机器人</span></div>
+              <div class="bubble">
+                <p>群 123456789 的授权页已生成。</p>
+                <p>仅群主可完成授权，需要手机 QQ 9.2.90 及以上。</p>
+                <p>打开后：消息范围选「获取群内全部消息」，打开「机器人主动在群聊内发言」，再点「同意授权」。</p>
+              </div>
+              <div class="kbd">
+                <div class="kbtn primary hl">群主点此授权</div>
+                <div class="kbtn">换个群号</div>
+              </div>
+            </div></div>
+          </div>
+          <div class="pin" style="left: 8px; top: 386px;">1</div>
+          <div class="tip" style="left: 72px; top: 440px;">只有群主点开才能授权</div>
+          <div class="inputbar"><div class="field" style="color:#b0b4ba">发消息…</div><div class="send">发送</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第三步：授权弹窗 -->
+    <div class="card">
+      <div class="card-head"><div class="num">3</div><div>选<em>「获取群内全部消息」</em>，打开<em>主动发言</em>，点「同意授权」</div></div>
+      <div class="stage">
+        <div class="phone">
+          <div class="sb"><span>09:41</span><span class="r">▂▄▆ 5G ▮▮▮</span></div>
+          <div class="nav"><span class="back">‹</span><span class="title">示例群<small>(128)</small></span><span class="menu">≡</span></div>
+          <div class="chat">
+            <div class="msg me"><div class="av a3">主</div><div><div class="bubble">@{{BOT_NAME}} /授权全消息 123456789</div></div></div>
+            <div class="msg"><div class="av bot">{{BOT_AVATAR}}</div><div><div class="bubble"><p>群 123456789 的授权页已生成。</p></div></div></div>
+          </div>
+          <div class="mask"></div>
+          <div class="sheet">
+            <h3>获取群聊相关权限</h3>
+            <div class="desc">数据仅用于AI对话服务，不会用于存储或其他用途。</div>
+            <div class="row">
+              <div class="t">机器人可获取的群聊消息…<div class="s">被@时，机器人可获取的群聊消息范围</div></div>
+              <div class="v hl">获取群内全部消息 ›</div>
+            </div>
+            <div class="row">
+              <div class="t">机器人主动在群聊内发言<div class="s">机器人可主动发消息，如定时任务推送等</div></div>
+              <div class="switch on hl"></div>
+            </div>
+            <div class="btns"><div class="no">暂不授权</div><div class="yes hl">同意授权</div></div>
+          </div>
+          <div class="pin" style="right: 6px; top: 408px;">1</div>
+          <div class="pin" style="right: 6px; top: 494px;">2</div>
+          <div class="pin" style="right: 6px; top: 592px;">3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

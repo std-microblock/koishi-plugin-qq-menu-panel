@@ -1,0 +1,118 @@
+/* /授权全消息 教程示意图的共用样式（纯示意，不是真实截图） */
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: #f3f5f9;
+  font-family: "Microsoft YaHei", "Noto Sans SC", "PingFang SC", sans-serif;
+  color: #1f2329;
+  -webkit-font-smoothing: antialiased;
+}
+.page { padding: 40px 48px 36px; }
+.head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+h1 { margin: 0; font-size: 42px; letter-spacing: 1px; }
+.sub { margin-top: 10px; font-size: 22px; color: #646a73; }
+.cmd { font-family: Consolas, "Microsoft YaHei", monospace; background: #e8f0ff; color: #1456f0; padding: 2px 10px; border-radius: 8px; }
+.note { font-size: 18px; color: #8f959e; border-left: 4px solid #7b61ff; padding-left: 12px; white-space: nowrap; }
+.cols { display: flex; gap: 28px; margin-top: 28px; }
+.card { flex: 1; background: #fff; border-radius: 22px; overflow: hidden; box-shadow: 0 6px 24px rgba(31, 35, 41, .08); display: flex; flex-direction: column; }
+.card-head { display: flex; gap: 14px; align-items: flex-start; padding: 22px 24px; min-height: 112px; font-size: 23px; font-weight: 700; line-height: 1.5; }
+.num { flex: none; width: 44px; height: 44px; border-radius: 50%; background: #1677ff; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-top: 2px; }
+.card-head em { font-style: normal; color: #1677ff; }
+.stage { flex: 1; background: linear-gradient(180deg, #e7ebf2, #dfe4ec); padding-top: 26px; display: flex; justify-content: center; }
+
+/* 手机外框 */
+.phone { position: relative; width: 390px; height: 700px; background: #f5f6f7; border: 11px solid #1f2329; border-bottom: 0; border-radius: 42px 42px 0 0; overflow: hidden; }
+.sb { height: 34px; padding: 0 22px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; font-weight: 700; background: inherit; }
+.sb .r { letter-spacing: 2px; font-size: 12px; }
+.nav { height: 52px; display: flex; align-items: center; padding: 0 14px; background: #f5f6f7; border-bottom: 1px solid #e5e6eb; position: relative; }
+.nav .back { font-size: 34px; line-height: 1; color: #1f2329; width: 30px; }
+.nav .title { flex: 1; text-align: center; font-size: 18px; font-weight: 700; }
+.nav .title small { font-weight: 400; color: #646a73; margin-left: 2px; }
+.nav .menu { width: 30px; text-align: right; font-size: 26px; }
+.white { background: #fff; }
+
+/* 高亮与标注 */
+.hl { outline: 4px solid #f5222d; outline-offset: 3px; border-radius: 10px; position: relative; }
+.pin { position: absolute; z-index: 5; width: 34px; height: 34px; border-radius: 50%; background: #f5222d; color: #fff; font-weight: 700; font-size: 19px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(245, 34, 45, .45); }
+.tip { position: absolute; z-index: 5; background: #f5222d; color: #fff; font-size: 15px; font-weight: 700; padding: 6px 12px; border-radius: 10px; white-space: nowrap; box-shadow: 0 3px 10px rgba(245, 34, 45, .35); }
+
+/* 头像 */
+.av { flex: none; width: 40px; height: 40px; border-radius: 50%; background: #c9cdd4; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 16px; }
+.av.bot { background: linear-gradient(135deg, #ffb547, #ff7a1a); }
+.av.a1 { background: #9fb4d9; } .av.a2 { background: #b7a3d9; } .av.a3 { background: #93c7b4; } .av.a4 { background: #e3a6a6; }
+.badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 4px; margin-right: 6px; vertical-align: 2px; color: #fff; }
+.badge.owner { background: #f7a600; } .badge.admin { background: #20c997; } .badge.bot { background: #1677ff; }
+
+/* 聊天 */
+.chat { padding: 16px 12px; display: flex; flex-direction: column; gap: 18px; }
+.msg { display: flex; gap: 10px; align-items: flex-start; }
+.msg.me { flex-direction: row-reverse; }
+.msg .name { font-size: 12px; color: #8f959e; margin-bottom: 4px; }
+.msg.me .name { text-align: right; }
+.bubble { background: #fff; border-radius: 4px 14px 14px 14px; padding: 10px 12px; font-size: 15px; line-height: 1.55; max-width: 270px; }
+.msg.me .bubble { background: #0099ff; color: #fff; border-radius: 14px 4px 14px 14px; }
+.bubble p { margin: 0 0 4px; }
+.kbd { display: flex; gap: 8px; margin-top: 8px; width: 270px; }
+.kbtn { flex: 1; background: #fff; border: 1.5px solid #c9cdd4; border-radius: 10px; text-align: center; padding: 9px 0; font-size: 15px; color: #1f2329; }
+.kbtn.primary { border-color: #1677ff; color: #1677ff; font-weight: 700; }
+.inputbar { position: absolute; left: 0; right: 0; bottom: 0; background: #f5f6f7; border-top: 1px solid #e5e6eb; padding: 10px 12px 16px; display: flex; gap: 10px; align-items: center; }
+.inputbar .field { flex: 1; background: #fff; border-radius: 10px; height: 40px; padding: 0 12px; display: flex; align-items: center; font-size: 15px; color: #1f2329; }
+.inputbar .send { background: #0099ff; color: #fff; border-radius: 10px; padding: 9px 16px; font-size: 15px; font-weight: 700; }
+.caret { display: inline-block; width: 2px; height: 20px; background: #0099ff; margin-left: 2px; vertical-align: -4px; }
+
+/* 列表与设置 */
+.search { margin: 10px 12px; height: 36px; border-radius: 10px; background: #fff; color: #8f959e; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+.sec { padding: 10px 16px 6px; font-size: 13px; color: #8f959e; }
+.item { display: flex; align-items: center; gap: 12px; padding: 9px 16px; background: #fff; font-size: 16px; }
+.item .n { flex: 1; }
+.box { margin: 12px; background: #fff; border-radius: 14px; overflow: hidden; }
+.row { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 1px solid #f0f1f2; font-size: 16px; background: #fff; }
+.row:last-child { border-bottom: 0; }
+.row .t { flex: 1; }
+.row .s { font-size: 12.5px; color: #8f959e; margin-top: 3px; }
+.row .v { color: #8f959e; font-size: 14px; }
+.chev { color: #b0b4ba; font-size: 20px; }
+.switch { flex: none; width: 50px; height: 30px; border-radius: 15px; background: #d0d3d6; position: relative; }
+.switch::after { content: ""; position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .2); }
+.switch.on { background: #0099ff; }
+.switch.on::after { left: 23px; }
+.danger { text-align: center; color: #f5222d; font-size: 16px; padding: 14px; }
+
+/* 授权弹窗 */
+.mask { position: absolute; inset: 34px 0 0 0; background: rgba(0, 0, 0, .45); }
+.sheet { position: absolute; left: 0; right: 0; bottom: 0; background: #fff; border-radius: 22px 22px 0 0; padding: 26px 20px 26px; }
+.sheet h3 { margin: 0; font-size: 24px; }
+.sheet .desc { font-size: 13px; color: #8f959e; margin: 6px 0 12px; }
+.sheet .row { padding: 16px 0; }
+.sheet .v { color: #646a73; font-size: 15px; padding: 6px 8px; }
+.sheet .btns { display: flex; gap: 14px; margin-top: 18px; }
+.sheet .btns div { flex: 1; text-align: center; padding: 13px 0; border-radius: 12px; font-size: 18px; font-weight: 700; }
+.sheet .no { border: 1.5px solid #d0d3d6; }
+.sheet .yes { background: #1677ff; color: #fff; }
+
+/* 机器人资料页 */
+.cover { height: 170px; background: radial-gradient(circle at 30% 40%, #ffe1b3, #ffb35c 55%, #ff8a3d); position: relative; }
+.cover .gear { position: absolute; right: 16px; top: 12px; width: 38px; height: 38px; border-radius: 50%; background: rgba(0, 0, 0, .25); color: #fff; font-size: 24px; display: flex; align-items: center; justify-content: center; }
+.cover .back { position: absolute; left: 14px; top: 10px; color: #fff; font-size: 34px; }
+.profile { margin: -34px 12px 0; background: #fff; border-radius: 16px; padding: 16px; position: relative; }
+.profile .top { display: flex; gap: 14px; align-items: center; }
+.profile .av { width: 66px; height: 66px; font-size: 26px; border: 3px solid #fff; }
+.profile .nm { font-size: 20px; font-weight: 700; }
+.profile .qq { font-size: 13px; color: #8f959e; margin-top: 3px; }
+.profile .intro { font-size: 13px; color: #646a73; margin-top: 12px; line-height: 1.6; }
+.bottom-btns { position: absolute; left: 12px; right: 12px; bottom: 18px; display: flex; gap: 12px; }
+.bottom-btns div { flex: 1; text-align: center; padding: 12px 0; border-radius: 12px; font-size: 16px; font-weight: 700; }
+.bottom-btns .o { border: 1.5px solid #c9cdd4; background: #fff; }
+.bottom-btns .p { background: #0099ff; color: #fff; }
+
+/* 群聊设置页头部 */
+.ghead { margin: 12px; background: #fff; border-radius: 14px; padding: 16px; display: flex; gap: 14px; align-items: center; }
+.ghead .gav { width: 60px; height: 60px; border-radius: 14px; background: linear-gradient(135deg, #7fb3ff, #4b7bec); color: #fff; font-size: 24px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.ghead .gname { font-size: 19px; font-weight: 700; }
+.ghead .gno { font-size: 15px; color: #646a73; margin-top: 6px; padding: 2px 6px; display: inline-block; }
+.ghead .qr { margin-left: auto; color: #8f959e; font-size: 14px; display: flex; align-items: center; gap: 6px; }
+.qr-icon { width: 22px; height: 22px; border: 3px solid #8f959e; border-radius: 4px; position: relative; }
+.qr-icon::after { content: ""; position: absolute; inset: 4px; background: #8f959e; }
+.faces { display: flex; }
+.faces .av { width: 28px; height: 28px; margin-left: -6px; border: 2px solid #fff; font-size: 11px; }
+.foot { margin-top: 18px; font-size: 16px; color: #8f959e; text-align: right; }

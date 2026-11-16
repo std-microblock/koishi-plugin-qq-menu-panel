@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="guide.css">
+<style>.page { height: 1040px; overflow: hidden; }</style>
+</head>
+<body>
+<div class="page">
+  <div class="head">
+    <div>
+      <h1>怎么找到群号</h1>
+      <div class="sub">找到后 <b>@{{BOT_NAME}}</b> 发送 <span class="cmd">/授权全消息 群号</span>，例如 <span class="cmd">/授权全消息 123456789</span></div>
+    </div>
+    <div class="note">界面为示意，不同版本略有差异 · 每个群授权一次即可</div>
+  </div>
+
+  <div class="cols">
+    <!-- 第一步：打开群聊设置 -->
+    <div class="card">
+      <div class="card-head"><div class="num">1</div><div>在群聊页面点<em>右上角 ≡</em><br>打开群聊设置</div></div>
+      <div class="stage">
+        <div class="phone">
+          <div class="sb"><span>09:41</span><span class="r">▂▄▆ 5G ▮▮▮</span></div>
+          <div class="nav"><span class="back">‹</span><span class="title">示例群<small>(128)</small></span><span class="menu hl" style="padding:0 4px">≡</span></div>
+          <div class="chat">
+            <div class="msg"><div class="av a1">群</div><div><div class="name">群友小明</div><div class="bubble">群号是多少来着？</div></div></div>
+            <div class="msg"><div class="av a2">管</div><div><div class="name"><span class="badge admin">管理员</span>阿管</div><div class="bubble">群聊设置里群名下面就是</div></div></div>
+          </div>
+          <div class="pin" style="right: 58px; top: 40px;">1</div>
+          <div class="tip" style="right: 16px; top: 96px;">点这里</div>
+          <div class="inputbar"><div class="field" style="color:#b0b4ba">发消息…</div><div class="send">发送</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第二步：群号位置 -->
+    <div class="card">
+      <div class="card-head"><div class="num">2</div><div>群名下方的数字就是<em>群号</em><br>长按可以复制</div></div>
+      <div class="stage">
+        <div class="phone">
+          <div class="sb"><span>09:41</span><span class="r">▂▄▆ 5G ▮▮▮</span></div>
+          <div class="nav"><span class="back">‹</span><span class="title">群聊设置</span><span class="menu"></span></div>
+          <div class="ghead">
+            <div class="gav">示</div>
+            <div><div class="gname">示例群</div><div class="gno hl">群号 123456789 ⧉</div></div>
+          </div>
+          <div class="box" style="margin-top: 40px">
+            <div class="row"><div class="t">群聊成员</div><div class="faces"><div class="av a1">群</div><div class="av a2">管</div><div class="av bot">{{BOT_AVATAR}}</div></div><span class="v">128人</span><span class="chev">›</span></div>
+            <div class="row"><div class="t">群公告</div><span class="chev">›</span></div>
+            <div class="row"><div class="t">群应用</div><span class="chev">›</span></div>
+          </div>
+          <div class="box">
+            <div class="row"><div class="t">查找聊天记录</div><span class="chev">›</span></div>
+            <div class="row"><div class="t">设置置顶</div><div class="switch"></div></div>
+            <div class="row"><div class="t">消息免打扰</div><div class="switch"></div></div>
+          </div>
+          <div class="pin" style="left: 262px; top: 104px;">2</div>
+          <div class="tip" style="left: 110px; top: 196px;">↑ 这串数字就是群号</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第三步：发送指令 -->
+    <div class="card">
+      <div class="card-head"><div class="num">3</div><div>回到群里 <em>@{{BOT_NAME}}</em> 发送<br><em>/授权全消息 群号</em></div></div>
+      <div class="stage">
+        <div class="phone">
+          <div class="sb"><span>09:41</span><span class="r">▂▄▆ 5G ▮▮▮</span></div>
+          <div class="nav"><span class="back">‹</span><span class="title">示例群<small>(128)</small></span><span class="menu">≡</span></div>
+          <div class="chat">
+            <div class="msg me"><div class="av a3">我</div><div><div class="bubble hl">@{{BOT_NAME}} /授权全消息 123456789</div></div></div>
+            <div class="msg"><div class="av bot">{{BOT_AVATAR}}</div><div>
+              <div class="name">{{BOT_NAME}} <span class="badge bot">机器人</span></div>
+              <div class="bubble"><p>群 123456789 的授权页已生成。</p><p>仅群主可完成授权……</p></div>
+              <div class="kbd"><div class="kbtn primary">群主点此授权</div><div class="kbtn">换个群号</div></div>
+            </div></div>
+          </div>
+          <div class="tip" style="left: 60px; top: 460px;">把 123456789 换成你的群号</div>
+          <div class="inputbar"><div class="field" style="color:#b0b4ba">发消息…</div><div class="send">发送</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
